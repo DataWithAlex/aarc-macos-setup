@@ -2,6 +2,7 @@
 
 This repository provides a guide for connecting to the ARCC (Advanced Research Computing Center) servers, managing files between your local machine and the remote server, and setting up the necessary modules and environments for our parallel computing class.
 
+```
 /Parallel-Computing
     ├── alex-testing
     ├── code.md
@@ -10,6 +11,7 @@ This repository provides a guide for connecting to the ARCC (Advanced Research C
     ├── README.md
     ├── test.py
     └── username.md
+```
 
 ## Prerequisites
 
