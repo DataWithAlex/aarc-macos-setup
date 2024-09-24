@@ -4,24 +4,32 @@ This repository provides a guide for connecting to the ARCC (Advanced Research C
 
 ```
 /Parallel-Computing
-    ├── alex-testing
-    ├── code.md
+    ├── /testing
     ├── id_rsa
     ├── id_rsa.pub
-    ├── README.md
-    ├── test.py
-    └── username.md
+    └── README.md
 ```
 
-## Prerequisites
+## Prerequisites & Set-Up
 
-- Ensure you have VS Code installed with the Remote - SSH extension.
-- Have your `id_rsa` private key in the directory. This key should be securely stored and not shared with anyone.
+- Ensure you have VS Code installed
+- Download this repo, open VScode, and follow these steps: `File > Open Folder > Select Cloned Folder`
+- Have your `id_rsa` and `id_rsa.pub` private keys in the directory. This key should be securely stored and not shared with anyone.
 
 ## How to Login
 
-1. Open the VS Code integrated terminal and navigate to the project directory.
-2. Set the correct permissions for the SSH key:
+- Right Click in the `VScode Explorer` and select `Open in Integrated Terminal`. Run the command below and make sure you have the expected output.
+
+```bash
+
+ls
+
+# Expected Output
+# README.md       id_rsa          id_rsa.pub      testing
+   
+```
+
+- Set the correct permissions for the SSH key:
 
 ```bash
 
@@ -29,7 +37,7 @@ This repository provides a guide for connecting to the ARCC (Advanced Research C
    
 ```
 
-## Connect to the remote server using SSH:
+### Connect to the remote server using SSH:
 
 ```bash
 
@@ -47,7 +55,9 @@ n*****n 000
 
 ```
 
-Loading Modules
+## Loading Modules
+
+Here are the modules that the professor loaded. __As more modules are reccommended, I will update this repo.__
 
 ```bash
 
@@ -72,7 +82,7 @@ conda activate mpi4Python
 
 ```
 
-Viewing the Directory
+## Viewing the Directory
 
 To view your current directory on the remote server, use:
 
@@ -80,25 +90,27 @@ To view your current directory on the remote server, use:
 
 pwd
 
-```
-
-Expected Output:
-
-```bash
-
+# Expected Output:
 /home/cop6526.studentXX
 
 ```
 
-## Uploading Files to the Remote Server
+## Uploading Files to the Remote Server (VERY IMPORTANT)
+
+Since all interactions with the `AARC Server` is through the terminal, we want to make all of our code in our VScode directory so it is easier to code. Once you are done coding and want to test it on the `AARC Server`, follow these steps:
 
 To upload files from your local machine to the remote server, use the following command:
 
+- right click on the `id_rsa` file, and select `copy path`. 
+- right click on the `testing` file, and select `copy path` (If you want to do another folder, you can do the same with that folder).
+
 ```bash
 
-rsync -avz -e "ssh -i '/Users/alexsciuto/Library/Mobile Documents/com~apple~CloudDocs/DataWithAlex/MSDA Classes/Parallel-Computing/id_rsa'" "/Users/alexsciuto/Library/Mobile Documents/com~apple~CloudDocs/DataWithAlex/MSDA Classes/Parallel-Computing/alex-testing/" cop6526.student29@stokes.ist.ucf.edu:/home/cop6526.student29/alex-testing/
+rsync -avz -e "ssh -i 'id_rsa path'" "testing path" cop6526.studentXX@stokes.ist.ucf.edu:/home/cop6526.studentXX/testing/
 
 ```
+
+to test it 
 
 ## Downloading Files from the Remote Server to Local Directory
 
@@ -106,7 +118,7 @@ To download files from the remote server to your local machine, use the followin
 
 ```bash
 
-rsync -avz -e "ssh -i '/Users/alexsciuto/Library/Mobile Documents/com~apple~CloudDocs/DataWithAlex/MSDA Classes/Parallel-Computing/id_rsa'" "cop6526.student29@stokes.ist.ucf.edu:/home/cop6526.student29/alex-testing/test.txt" "/Users/alexsciuto/Library/Mobile Documents/com~apple~CloudDocs/DataWithAlex/MSDA Classes/Parallel-Computing/alex-testing/"
+rsync -avz -e "ssh -i 'd_rsa path'" "cop6526.studentXX@stokes.ist.ucf.edu:/home/cop6526.studentXX/testing/test.txt" "/Users/alexsciuto/Library/Mobile Documents/com~apple~CloudDocs/DataWithAlex/MSDA Classes/Parallel-Computing/testing/"
 
 ```
 
