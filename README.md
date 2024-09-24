@@ -2,10 +2,19 @@
 
 This repository provides a guide for connecting to the ARCC (Advanced Research Computing Center) servers, managing files between your local machine and the remote server, and setting up the necessary modules and environments for our parallel computing class.
 
+/Parallel-Computing
+    ├── alex-testing
+    ├── code.md
+    ├── id_rsa
+    ├── id_rsa.pub
+    ├── README.md
+    ├── test.py
+    └── username.md
+
 ## Prerequisites
 
-1. Ensure you have VS Code installed with the Remote - SSH extension.
-2. Have your `id_rsa` private key in the directory. This key should be securely stored and not shared with anyone.
+- Ensure you have VS Code installed with the Remote - SSH extension.
+- Have your `id_rsa` private key in the directory. This key should be securely stored and not shared with anyone.
 
 ## How to Login
 
