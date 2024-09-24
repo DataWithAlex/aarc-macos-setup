@@ -51,6 +51,21 @@ Once connected, type the following command to access the Newton server:
 n*****n 000
 ```
 
+## Viewing the Directory
+
+To view your current directory on the remote server, use:
+
+```bash
+pwd
+```
+
+```bash
+# Expected Output:
+/home/cop6526.studentXX
+```
+
+If you got this output, you can move forward with the next commands. __It is important to make sure you are actually logged in__
+
 ## Loading Modules
 
 Here are the modules that the professor loaded. __As more modules are reccommended, I will update this repo.__
@@ -70,19 +85,6 @@ Activate the environment for MPI with Python:
 
 ```bash
 conda activate mpi4Python
-```
-
-## Viewing the Directory
-
-To view your current directory on the remote server, use:
-
-```bash
-pwd
-```
-
-```bash
-# Expected Output:
-/home/cop6526.studentXX
 ```
 
 ## Uploading Files to the Remote Server (VERY IMPORTANT)
