@@ -32,7 +32,7 @@ README.md       id_rsa          id_rsa.pub      testing
 - Set the correct permissions for the SSH key:
 
 ```bash
-   chmod 600 id_rsa
+chmod 600 id_rsa
 ```
 
 ### Connect to the remote server using SSH:
