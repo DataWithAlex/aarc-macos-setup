@@ -25,7 +25,7 @@ ls
 ```
 
 ```bash
-# Expected Output
+# Expected Output:
 README.md       id_rsa          id_rsa.pub      testing
 ```
 
